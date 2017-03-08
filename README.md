@@ -1,8 +1,8 @@
 Role Name
 =========
 
-Disabling of Transparent Huge Pages (THP).  Database
-workloads do not do well with THP enabled.
+Increase operating system limits.  Database
+workloads do not do well with default limits.
 
 Requirements
 ------------
@@ -12,7 +12,9 @@ TODO
 Role Variables
 --------------
 
-* thp_disable: true
+* raise_os_limits: true
+* os_limits_file_count: 64000
+* os_limits_process_count: 32000
 
 Dependencies
 ------------
@@ -25,7 +27,7 @@ Example Playbook
 ```
 - hosts: servers
   roles:
-      - { role: kurron.transparent-huge-pages }
+      - { role: kurron.os-limits, os_limits_file_count: 64000 }
 ```
 
 License
