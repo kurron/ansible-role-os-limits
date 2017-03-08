@@ -1,2 +1,4 @@
 ---
-thp_disable: true
+raise_os_limits: true
+os_limits_file_count: 64000
+os_limits_process_count: 32000

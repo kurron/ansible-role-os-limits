@@ -1,4 +1,4 @@
 ---
 - hosts: remote
   roles:
-  - role: ../../ansible-role-transparent-huge-pages
+  - role: ../../ansible-role-os-limits
